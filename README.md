@@ -3,10 +3,10 @@ Fase 1 del proyecto de seminario
 Seminario 1 - Proyecto 1 - Fase 1
 
 # Prerequisito
--Instalar docker en la máquina
--Creamos una carpeta que contendrá todos nuestros dockerfile
-	mkdir seminario1
--Nos movemos a esa carpeta
+	-Instalar docker en la máquina
+	-Creamos una carpeta que contendrá todos nuestros dockerfile
+	-mkdir seminario1
+	-Nos movemos a esa carpeta
 	cd seminario1/
 
 # 1. MySQL
@@ -17,15 +17,12 @@ Seminario 1 - Proyecto 1 - Fase 1
 	cd mysql-microservice/
 
 ## 1.3. Creamos un archivo llamado Dockerfile que contiene lo siguiente
-
-      	FROM mysql:5.7
-   	MAINTAINER Elmer Alay <alayelmer1993@gmail.com>
+	FROM mysql:5.7
+	MAINTAINER Elmer Alay <alayelmer1993@gmail.com>
 
 	ENV MYSQL_DATABASE=seminario1 \
-      	MYSQL_ROOT_PASSWORD=1234
-
-      	COPY ./script.sql /docker-entrypoint-initdb.d/
-
+	MYSQL_ROOT_PASSWORD=1234
+	COPY ./script.sql /docker-entrypoint-initdb.d/
 
 ## 1.4. Creamos el archivo script.sql y copiamos lo que se encuentra en la carpeta de mysql aquí en este repositorio.
 
